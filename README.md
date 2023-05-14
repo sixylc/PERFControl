@@ -6,6 +6,6 @@
 
 ### 安装
 - [下载最新版本](https://github.com/sixylc/PERFControl/blob/main/PackDIR/Install_PERFControl_V2.3.0.5_Linux_amd64_g%2B%2B10.2.1_Release.deb)
-- sudo dpkg -i ./PERFControl.deb
+- `sudo dpkg -i ./*PERFControl*.deb`
 ### 卸载
-- sudo dpkg -r PERFControl
+- `sudo dpkg -r PERFControl`
