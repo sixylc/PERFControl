@@ -40,4 +40,4 @@ chmod 755 -R ${Pack_TEMP}
 mkdir -p ${Pack_DIR}
 ${Pack_CLI}
 
-rm -r ${Pack_TEMP}
+rm -r ${CMAKE_BUILD_RPATH}/*
