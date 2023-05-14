@@ -1,0 +1,43 @@
+﻿#!/bin/bash
+
+mkdir -p ${Pack_TEMP}/opt/${PROJECT_ProductName}/bin
+cp -r  ${EXECUTABLE_OUTPUT_PATH}/* ${Pack_TEMP}/opt/${PROJECT_ProductName}/bin
+
+mkdir -p ${Pack_TEMP}/usr/share/icons/${PROJECT_ProductName}
+cp ${PROJECT_ICON} ${Pack_TEMP}/usr/share/icons/${PROJECT_ProductName}/Project.ico
+
+mkdir -p ${Pack_TEMP}/usr/share/applications
+echo '[Desktop Entry]' > ${Pack_TEMP}/usr/share/applications/${PROJECT_ProductName}.desktop
+echo 'Type=Application' >> ${Pack_TEMP}/usr/share/applications/${PROJECT_ProductName}.desktop
+echo 'Exec=/opt/${PROJECT_ProductName}/bin/${PROJECT_ProductName}' >> ${Pack_TEMP}/usr/share/applications/${PROJECT_ProductName}.desktop
+echo 'Icon=/usr/share/icons/${PROJECT_ProductName}/Project.ico' >> ${Pack_TEMP}/usr/share/applications/${PROJECT_ProductName}.desktop
+echo 'Terminal=false' >> ${Pack_TEMP}/usr/share/applications/${PROJECT_ProductName}.desktop
+echo 'Name=${PROJECT_ProductName}' >> ${Pack_TEMP}/usr/share/applications/${PROJECT_ProductName}.desktop
+
+mkdir -p ${Pack_TEMP}/DEBIAN/
+touch ${Pack_TEMP}/DEBIAN/control
+echo 'Package:${PROJECT_ProductName}' > ${Pack_TEMP}/DEBIAN/control
+echo 'Version:${PROJECT_ProductVersion}' >> ${Pack_TEMP}/DEBIAN/control
+echo 'Architecture:${CMAKE_SYSTEM_PROCESSOR}' >> ${Pack_TEMP}/DEBIAN/control
+echo 'Description:${PROJECT_DESCRIPTION}' >> ${Pack_TEMP}/DEBIAN/control
+echo 'Maintainer:${PROJECT_WEBLINK}' >> ${Pack_TEMP}/DEBIAN/control
+echo 'Depends:${Depends}' >> ${Pack_TEMP}/DEBIAN/control
+
+touch ${Pack_TEMP}/DEBIAN/postinst
+echo '#!/bin/bash' > ${Pack_TEMP}/DEBIAN/postinst
+echo 'ln -s /opt/${PROJECT_ProductName}/bin/${PROJECT_ProductName} /usr/local/bin/${PROJECT_ProductName}' >> ${Pack_TEMP}/DEBIAN/postinst
+
+touch ${Pack_TEMP}/DEBIAN/prerm
+echo '#!/bin/bash' > ${Pack_TEMP}/DEBIAN/prerm
+echo 'rm -f /usr/share/applications/${PROJECT_ProductName}.desktop' >> ${Pack_TEMP}/DEBIAN/prerm
+echo 'rm -f /usr/local/bin/${PROJECT_ProductName}' >> ${Pack_TEMP}/DEBIAN/prerm
+echo 'rm -rf /opt/${PROJECT_ProductName}' >> ${Pack_TEMP}/DEBIAN/prerm
+echo 'rm -rf /usr/share/icons/${PROJECT_ProductName}' >> ${Pack_TEMP}/DEBIAN/prerm
+echo 'rm -rf /opt/${PROJECT_ProductName}' >> ${Pack_TEMP}/DEBIAN/prerm
+
+
+chmod 755 -R ${Pack_TEMP}
+mkdir -p ${Pack_DIR}
+${Pack_CLI}
+
+rm -r ${Pack_TEMP}

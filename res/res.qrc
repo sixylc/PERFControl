@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>project.svg</file>
+        <file>MainWindow.qss</file>
+    </qresource>
+</RCC>

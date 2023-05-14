@@ -1,0 +1,2 @@
+cd ${CMAKE_PREFIX_PATH}
+windeployqt ${EXECUTABLE_OUTPUT_PATH}/${PROJECT_ProductName}.exe

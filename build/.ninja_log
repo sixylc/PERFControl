@@ -1,0 +1,24 @@
+# ninja log v5
+18	2567	1684069141399884267	CMakeFiles/PERFControl.dir/lcwidget.cpp.o	78296e9e28ea8331
+8113	8261	1684068723914905877	CMakeFiles/PERFControl.dir/PERFControl_autogen/PNK5WDWK6L/qrc_res.cpp.o	bf3d12c38a053567
+0	3	0	CMakeFiles/clean.additional	6f6b1d890a561f23
+2	17	1684069138847877249	/home/chen/文档/PERFControl_2/build/PERFControl_autogen/timestamp	febadb6bfe428be6
+1121	9438	1684068725090908096	CMakeFiles/PERFControl.dir/cpu.cpp.o	b5bade18523151aa
+1121	8385	1684068724042906119	CMakeFiles/PERFControl.dir/PERFControl_autogen/mocs_compilation.cpp.o	608119305bd4bb93
+3247	3637	1684069142467887200	deploy/PERFControl	70fe573506bef849
+1121	8665	1684068724322906647	CMakeFiles/PERFControl.dir/fan.cpp.o	c2027895519c4b39
+2	17	1684069138847877249	/home/chen/文档/PERFControl_2/build/PERFControl_autogen/mocs_compilation.cpp	febadb6bfe428be6
+1114	1121	1684068716778892408	/home/chen/文档/PERFControl_2/build/PERFControl_autogen/PNK5WDWK6L/qrc_res.cpp	d9aef02752d36b16
+2	17	1684069138847877249	PERFControl_autogen/timestamp	febadb6bfe428be6
+7498	10623	1684068726282910346	CMakeFiles/PERFControl.dir/sysctl.cpp.o	aeea215573847e0b
+18	3246	1684069142075886124	CMakeFiles/PERFControl.dir/mainwidget.cpp.o	fbcab9a50bdce8c1
+1122	8112	1684068723762905591	CMakeFiles/PERFControl.dir/main.cpp.o	9c7655a785343bb8
+3	6	0	clean	834dd9d0f6143dbc
+2	17	1684069138847877249	PERFControl_autogen/mocs_compilation.cpp	febadb6bfe428be6
+1114	1121	1684068716778892408	PERFControl_autogen/PNK5WDWK6L/qrc_res.cpp	d9aef02752d36b16
+2	15	1684069181291992729	PERFControl_autogen/timestamp	febadb6bfe428be6
+2	15	1684069181291992729	PERFControl_autogen/mocs_compilation.cpp	febadb6bfe428be6
+2	15	1684069181291992729	/home/chen/文档/PERFControl_2/build/PERFControl_autogen/timestamp	febadb6bfe428be6
+2	15	1684069181291992729	/home/chen/文档/PERFControl_2/build/PERFControl_autogen/mocs_compilation.cpp	febadb6bfe428be6
+17	2908	1684069184184000505	CMakeFiles/PERFControl.dir/mainwidget.cpp.o	fbcab9a50bdce8c1
+2908	3295	1684069184568001537	deploy/PERFControl	70fe573506bef849

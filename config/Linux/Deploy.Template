@@ -1,0 +1,2 @@
+﻿#!/bin/bash -e
+python3 ${CONFIG_PATH}/linuxdeployqt6.py -force -qtdir ${CMAKE_PREFIX_PATH} -out-dir ${EXECUTABLE_OUTPUT_PATH} ${EXECUTABLE_OUTPUT_PATH}/${PROJECT_ProductName}
