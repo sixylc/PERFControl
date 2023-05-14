@@ -4,6 +4,6 @@
 
 ## 如何安装与卸载
 ### 安装
-- sudo dpkg -i ./PERFControl_V2.3.0.5.deb
+- sudo dpkg -i ./PERFControl.deb
 ### 卸载
 - sudo dpkg -r PERFControl
